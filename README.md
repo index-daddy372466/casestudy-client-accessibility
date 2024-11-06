@@ -2,7 +2,8 @@
 
 ## Description
 
-- Shaggy Secrets is a Mock-Single Page Application (SPA), that deals classified/non-classified information to and from the black market.
+- Stay up to date with the latest gossip that you cannot get anywhere else.
+Connect with the right people and you may get lost in a world of secrets.
 
 ### Issues:
 

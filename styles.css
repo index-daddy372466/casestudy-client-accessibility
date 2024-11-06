@@ -81,11 +81,46 @@ body {
   justify-content: center;
   text-align: center;
 }
+/* #wrapper{
+  border:3px solid green;
+  margin:0 .5rem;
+} */
+#banner,#info{
+  margin-left:.75rem;
+}
+#banner{
+  display:flex;
+  align-items: end;
+  justify-items: end;
+  gap:.5rem;
+  margin-bottom:1.25rem;
+}
+.info-para{
+  line-height: 1.5rem;
+  font-size:14px;
+}
+#info-hooks{
+  /* bordeR:2px solid orange; */
+display:flex;
+margin-top:1.5rem;
+gap:2rem;
+}
+.info-container>i{
+  font-size:26px;
+}
+.info-container{
+  gap:.15rem;
+  display:flex;
+}
 #banner-title {
   font-family: "Poiret One", sans-serif !important;
-  font-weight: 400;
-  font-size: 35px;
+  font-weight: 600;
+  font-size: 45px;
   font-style: normal;
+}
+#llc{
+  font-family: "Poiret One", sans-serif !important;
+  font-weight: bold;
 }
 #logo{
     position:absolute;
@@ -128,7 +163,7 @@ body {
 /* sections */
 #main{
     width:100%;
-    border:3px solid red;
+    /* border:3px solid red; */
     height:100vh;
     display:grid;
     grid-template-columns: 1fr 1fr;
@@ -136,7 +171,14 @@ body {
 
 /* image container */
 #header-img,#header{
-    border:3px solid purple;
+    /* border:3px solid purple; */
     height:100%;
     width:100%;
+}
+/* container header */
+.header-container{
+  display:flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
 }

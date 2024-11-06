@@ -16,7 +16,7 @@ function hoverOverListItem(e){
     const hrclass = 'hr-class'
     hr.classList.add(hrclass)
     hr.style.top = midHeight + 'px'
-    if(event.currentTarget.children.length < 1){
+    if(event.currentTarget.children.length > 0){
         event.currentTarget.appendChild(hr)
     }
     }
@@ -24,7 +24,7 @@ function hoverOverListItem(e){
         let event = e||window;
         const hrclass = '.hr-class'
         const hr = document.querySelector(hrclass)
-        if(event.currentTarget.children.length > 0 && event.currentTarget.children.length < 2){
+        if(event.currentTarget.children.length > 0 && event.currentTarget.children.length < 3){
             event.currentTarget.removeChild(hr)
         }
     }

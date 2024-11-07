@@ -28,19 +28,21 @@
     <div id="wrapper">
       <!-- logo -->
       <div id="logo-container">
-        <img src="./shh.webp" alt="" height="75" width="85" id="logo" />
+        <a href="/">
+          <img src="./shh.webp" alt="" height="75" width="85" id="logo" />
+        </a>
       </div>
       <!-- navigation -->
       <div id="nav" class="nav-container container-nav">
         <ul class="nav-list-container">
           <li class="nav-list-item nohighlight">
-            <a href="pages/offer.html">What we offer</a>
+            <a href="#">What we offer</a>
           </li>
           <li class="nav-list-item nohighlight">
-            <a href="pages/about.html">Why Shaggy?</a>
+            <a href="#">Why Shaggy?</a>
           </li>
           <li class="nav-list-item nohighlight">
-            <a href="pages/contact.html">Contact Us</a>
+            <a href="#">Contact Us</a>
           </li>
         </ul>
         <div class="user-container container-user">
@@ -52,46 +54,51 @@
         <!-- header -->
         <section id="header" class="header-container container-header">
           <!-- banner header -->
-          <div id="banner" class="banner-header header-banner">
-            <h1 id="banner-title">Shaggy Secrets</h1>
-            <span id="llc">LLC</span>
-          </div>
-          <!-- info for clients -->
-          <div id="info">
-            <p class="info-para para-info">
-              Stay up to date with the latest gossip you can't get
-              anywhere else. <br />
-              Connect with the right people and you may get lost in a world of
-              secrets.
-            </p>
-            <!-- qualifications/info -->
-            <div id="info-hooks">
-              <div class="info-container container-info">
-                <i class="fa-solid fa-1"></i>
-                <p class="info-para-more">End-to-End Encryption</p>
-              </div>
-              <div class="info-container container-info">
-                <i class="fa-solid fa-2"></i>
-                <p class="info-para-more">Audio/Video capability</p>
-              </div>
-              <div class="info-container container-info">
-                <i class="fa-solid fa-3"></i>
-                <p class="info-para-more">Fact Checking</p>
+          <div id="banner-container">
+            <div id="banner" class="banner-header header-banner">
+              <h1 id="banner-title">Shaggy Secrets</h1>
+              <p id="llc">LLC</p>
+            </div>
+            <!-- info for clients -->
+            <div id="info">
+              <p class="info-para para-info">
+                Stay up to date with the latest gossip you can't get anywhere
+                else. <br />
+                Connect with the right people and you may get lost in a world of
+                secrets.
+              </p>
+              <!-- qualifications/info -->
+              <div id="info-hooks">
+                <div class="info-container container-info">
+                  <i class="fa-solid fa-1"></i>
+                  <p class="info-para-more">End-to-End Encryption</p>
+                </div>
+                <div class="info-container container-info">
+                  <i class="fa-solid fa-2"></i>
+                  <p class="info-para-more">Audio/Video capability</p>
+                </div>
+                <div class="info-container container-info">
+                  <i class="fa-solid fa-3"></i>
+                  <p class="info-para-more">Fact Checking</p>
+                </div>
               </div>
             </div>
 
             <!-- cta -->
-            <button class="cta cta-btn btn-cta">Learn More</button>
-            <button class="cta cta-btn btn-cta">Sign Up</button>
+            <div id="cta-container">
+              <button class="cta cta-btn btn-cta">Learn More</button>
+              <button class="cta cta-btn btn-cta">Sign Up</button>
+            </div>
           </div>
         </section>
         <!-- image container -->
         <section id="header-img" class="img-container container-img">
           <!-- img -->
-          <img src="" alt="" id="img" class="img-actual actual-img" />
+          <img src="./cave.jpg" alt="" id="img" class="img-actual actual-img" />
         </section>
       </main>
     </div>
     <script src="main.js"></script>
+    <!-- <script src="tests.js"></script> -->
   </body>
 </html>

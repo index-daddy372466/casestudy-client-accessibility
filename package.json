@@ -1,0 +1,15 @@
+{
+  "name": "case1_client_navigation",
+  "version": "1.0.0",
+  "description": "- Stay up to date with the latest gossip that you cannot get anywhere else.\r Connect with the right people and you may get lost in a world of secrets.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "line-reader": "^0.4.0"
+  }
+}

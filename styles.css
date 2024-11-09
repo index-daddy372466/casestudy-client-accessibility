@@ -228,11 +228,19 @@ body {
   cursor: pointer;
 }
 
-
+.vis-none{
+  position: absolute;
+  top:100px;
+}
 @media screen and (max-width:989px){
+  body{
+    overflow-x: hidden;
+  }
   #banner-container{
     transform:scale(1);
   }
+ 
+
 }
 @media screen and (max-width:800px){
   #main{

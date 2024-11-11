@@ -241,6 +241,9 @@ body {
 #mob-wrapper{
   display:none;
 }
+.invert-env{
+  background:#000;
+}
 @media screen and (max-width: 989px) {
   #mob-button-container {
     display: block;
@@ -262,6 +265,7 @@ body {
     position:fixed;
     top:0;
     left:0;
+    transition: .25s;
     width:100%;
     display:Block;
   }
@@ -294,6 +298,9 @@ body {
     width: 75%;
     background: #000;
     transition: 0.75s;
+  }
+  .invert-span{
+    background:#fff;
   }
   .top-span {
     transform: translate(0, 13.5px) rotate(45deg);
@@ -363,6 +370,9 @@ body {
     top: 5px;
     left: 8px;
     z-index: 999;
+  }
+  .invert-logo{
+    background:#fff;
   }
 }
 @media screen and (max-width: 800px) {

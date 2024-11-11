@@ -91,8 +91,9 @@ window.onscroll = e => {
 }
 
 function invertHeader(){
+  const navclosed = document.querySelector('#nav').classList['value'].split` `.filter(x=>/(hi-nav|bye-nav)/i.test(x)).length < 2
   mobwrap.classList.add('invert-env')
-  spans.forEach(sp=>sp.classList.add('invert-span'))
+  spans.forEach(sp=>navclosed ? sp.classList.add('invert-span') : sp.classList.remove('invert-span'))
   document.getElementById('logo').classList.add('invert-logo')
 }
 function removeInvertHeader(){

@@ -26,17 +26,24 @@
   <body>
     <!-- wrap all -->
     <div id="wrapper">
-      <!-- logo -->
-      <div id="logo-container">
-        <a href="/">
-          <img src="./shh.webp" alt="" height="75" width="85" id="logo" />
-        </a>
-      </div>
+       <div id="mob-wrapper"></div>
+          <!-- logo -->
+        <div id="logo-container">
+          <a href="/">
+            <img src="/images/shh.webp" alt="" height="75" width="85" id="logo" />
+          </a>
+        </div>
+          <div id="span-container">
+            <div class="mob-span no-pointer"></div>
+            <div class="mob-span no-pointer"></div>
+            <div class="mob-span no-pointer"></div>
+          </div>
+      
       <!-- navigation -->
-      <div id="nav" class="nav-container container-nav">
+      <div id="nav" class="nav-container container-nav bye-nav">
         <ul class="nav-list-container">
           <li class="nav-list-item nohighlight">
-            <a href="#">What we offer</a>
+            <a href="#whatweoffer">What we offer</a>
           </li>
           <li class="nav-list-item nohighlight">
             <a href="#">Why Shaggy?</a>
@@ -44,10 +51,13 @@
           <li class="nav-list-item nohighlight">
             <a href="#">Contact Us</a>
           </li>
+          <li class="nav-list-item nohighlight">
+            <a href="#">Contact Us</a>
+          </li>
         </ul>
         <div class="user-container container-user">
-          <button id="login">Login</button>
-          <button id="signup">Signup</button>
+          <button id="login" class="userbtn">Login</button>
+          <button id="signup" class="userbtn">Signup</button>
         </div>
       </div>
       <main id="main">
@@ -94,11 +104,16 @@
         <!-- image container -->
         <section id="header-img" class="img-container container-img">
           <!-- img -->
-          <img src="./cave.jpg" alt="" id="img" class="img-actual actual-img" />
+          <img
+            src="images/cave.jpg"
+            alt=""
+            id="img"
+            class="img-actual actual-img"
+          />
         </section>
       </main>
     </div>
     <script src="main.js"></script>
-    <!-- <script src="tests.js"></script> -->
+    <script src="tests.js"></script>
   </body>
 </html>

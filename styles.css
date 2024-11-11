@@ -25,6 +25,9 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: end;
+  position: fixed;
+  border-bottom: 2px solid black;
+  top: 0;
   align-items: center;
   height: 80px;
   box-shadow: 0 0.25rem 20px 0.5px #333;
@@ -104,7 +107,7 @@ body {
   justify-items: end;
   gap: 0.5rem;
   margin-bottom: 1.25rem;
-  width:100%;
+  width: 100%;
   flex-wrap: wrap;
 }
 .info-para {
@@ -160,7 +163,8 @@ body {
   transition: 0.25s;
   padding: 0.5rem;
   font-size: 16px;
-  background:transparent;
+  background: transparent;
+  z-index: 998;
 }
 #login:hover,
 #signup:hover {
@@ -188,17 +192,16 @@ body {
 #header {
   height: 100%;
   width: 100%;
-  
 }
-#header-img{
+#header-img {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-#img{
-  width:88%;
-  box-shadow: 0 0 8px .9px #333;
+#img {
+  width: 88%;
+  box-shadow: 0 0 8px 0.9px #333;
 }
 
 /* container header */
@@ -220,7 +223,7 @@ body {
   padding: 0.5rem;
   margin-left: 2rem;
   transition: 0.25s;
-  box-shadow: 0 0.15rem 8px .9px #333
+  box-shadow: 0 0.15rem 8px 0.9px #333;
 }
 .cta-btn:hover {
   background: #fff;
@@ -228,31 +231,150 @@ body {
   cursor: pointer;
 }
 
-.vis-none{
-  position: absolute;
-  top:100px;
+#mob-button-container {
+  display: none;
 }
-@media screen and (max-width:989px){
-  body{
+.no-pointer {
+  pointer-events: none;
+}
+#mob-wrapper{
+  display:none;
+}
+@media screen and (max-width: 989px) {
+  #mob-button-container {
+    display: block;
+    /* border-bottom: 2px solid #333; */
+    width: 100%;
+    height: 55px;
+    position: fixed;
+    top: 10px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    z-index: 998;
+  }
+  #mob-wrapper{
+    border-bottom:2px solid black;
+    height:67px;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    display:Block;
+  }
+  .spawn-hr{
+    width:75%;
+    margin:0 auto;
+    text-align: center;
+    border:2px solid rgb(0, 0, 0);
+    border-radius: 0 12px;
+    position: absolute;
+    bottom:.5px;
+    
+  }
+  #span-container {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    position:fixed;
+    right:0;
+    top:10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0 1rem 0 0;
+    z-index: 999;
+    cursor:pointer;
+  }
+  .mob-span {
+    height: 6px;
+    width: 75%;
+    background: #000;
+    transition: 0.75s;
+  }
+  .top-span {
+    transform: translate(0, 13.5px) rotate(45deg);
+  }
+  .bottom-span {
+    transform: translate(0, -15px) rotate(-45deg);
+  }
+  .mid-span {
+    opacity: 0;
+    transform: translate(0, -5px) rotate(360deg);
+  }
+  #banner-title {
+    font-size:35px;
+  }
+  
+  .toggle-mob {
+    animation: flip 0.25s forwards;
+  }
+  body {
     overflow-x: hidden;
   }
-  #banner-container{
-    transform:scale(1);
+  #banner-container {
+    transform: scale(1);
+    gap: 0.5rem;
+    margin-top: 2.75rem;
   }
- 
+  #nav {
+    border: 2px solid rgb(67, 198, 255);
+    transition: 0.75s;
+    width:245px;
+    height: 300px;
+    z-index: 997;
+    background: ghostwhite;
+    overflow: hidden;
+  }
 
-}
-@media screen and (max-width:800px){
-  #main{
+  .bye-nav {
+    right: -100%;
+  }
+  .hi-nav {
+    right: 0;
+  }
+  .nav-list-container {
+    flex-direction: column;
+    justify-content: center;
+    gap: .25rem;
     margin-top:2rem;
-    display:flex;
+  }
+  .nav-list-item > a {
+    width: 165px;
+    position:relative;
+  }
+  #login,
+  #signup,
+  .nav-list-item {
+    margin: unset;
+    height: 50px;
+  }
+  .user-container {
+    justify-content: end;
+  }
+
+  #logo {
+    position: fixed;
+    height: 55px;
+    width: 60px;
+    top: 5px;
+    left: 8px;
+    z-index: 999;
+  }
+}
+@media screen and (max-width: 800px) {
+  #main {
+    margin-top: 2rem;
+    display: flex;
     flex-direction: column;
   }
-  #img{
-    max-width:400px;
-    min-width:250px;
+  #img {
+    max-width: 400px;
+    min-width: 250px;
   }
   .cta-btn {
     margin-top: unset;
-  }  
+  }
 }

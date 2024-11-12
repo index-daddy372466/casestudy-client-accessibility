@@ -53,7 +53,7 @@ _____
 
 1. _Overlapped Elements_
 
-- In response to overlapping elements, the current ```nav#nav``` element is transformed into a compact,div element & is viewed when user toggles the hamburger menu.
+In response to overlapping elements, the current ```nav#nav``` element is transformed into a compact,div element & is viewed when user toggles the hamburger menu.
 
 <div style="display:grid;grid-template-columns:1fr 1fr;width:100%;transform:scale(.88);">
 <img src="./images/solution_starting_point.jpg"/>
@@ -102,4 +102,43 @@ const spans = [...mobbtn.children]
 <img src="./images/solution_scroll_down.jpg"/>
 <img src="./images/solution_scroll_down_nav.jpg"/>
 </div>
-1. _Touch event: element remains in hovered state_
+
+2. _Touch event: element remains in hovered state_
+
+Hovered elements utilized are fixed to make it seem like the hovered element is disabled.<br>
+The links' transition is **unset** since there is no need to transition to a different background/text color.
+Finally, **_:active pseudo-class_** is implemented to alert the user that a link has been clicked on.
+
+**_CSS_**
+```
+.nav-list-item > a,
+  #login,#signup{
+    transition: unset;
+  }
+  .nav-list-item > a:hover,
+  #login:hover,#signup:hover {
+    color: #000;
+    background: transparent;
+  }
+  .nav-list-item > a:active,
+  #login:active,#signup:active {
+    color: ghostwhite;
+    background: #333;
+    cursor: pointer;
+  }
+```
+
+ <img src="./images/underlinefeat.jpg">
+
+ The underline-feature seems to be cutting through the navigation-item text.<br>
+ Javascript is used to create a condition **_[mobileWidth]_** that determines the devices' inner width. If the condition returns true, then the underline-feature is sacrificed because ```mouseenter``` & ```mouseleave``` events will not be triggered.<br>
+**_JS_**
+```
+const mobileWidth = window.innerWidth <= 989;
+
+if(!mobileWidth){
+  item.addEventListener("mouseenter", hoverOverListItem);
+  item.addEventListener("mouseleave", hoverLeaveListItem);
+ }
+```
+

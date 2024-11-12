@@ -52,4 +52,54 @@ _____
 ### Solutions:
 
 1. _Overlapped Elements_
+
+- In response to overlapping elements, the current ```nav#nav``` element is transformed into a compact,div element & is viewed when user toggles the hamburger menu.
+
+<div style="display:grid;grid-template-columns:1fr 1fr;width:100%;transform:scale(.88);">
+<img src="./images/solution_starting_point.jpg"/>
+<img src="./images/solution_starting_point_nav.jpg"/>
+</div>
+
+3 ```span``` elements are combined to create the _Hamburger_ menu.
+3 classes are made-up to represent how the span elements will end up after the container is clicked. (Hamburger menu).<br>
+In addition, the Navigation menu's position is determined by classes, _hi-nav_ & _bye-nav_.
+**_CSS_**
+```
+.bye-nav {
+    right: -100%;
+  }
+  .hi-nav {
+    right: 0;
+  }
+  .top-span {
+    transform: translate(0, 13.5px) rotate(45deg);
+  }
+  .bottom-span {
+    transform: translate(0, -15px) rotate(-45deg);
+  }
+  .mid-span {
+    opacity: 0;
+    transform: translate(0, -5px) rotate(360deg);
+  }
+```
+Javascript captures an array of 3-classes and stores it into ```spanclasses``` variable. Next, a click event is set on the hamburger's container, _span-container_, where each span toggles it's class, or position, based on ```spanclasses``` variable index. Finally a toggleNav() function displays our mobile navigation pane or hides the element.<br>
+**_JS_**
+```
+const spanclasses = ['top-span','mid-span','bottom-span']
+const mobbtn = document.getElementById('span-container')
+const spans = [...mobbtn.children]
+
+// test click mob button
+  mobbtn.onclick = e => {
+      console.log('target acquired')
+      spans.forEach((sp,idx)=>{
+         sp.classList.toggle(spanclasses[idx])
+      })
+      toggleNav(document.getElementById('nav'))
+  }
+```
+<div style="display:grid;grid-template-columns:1fr 1fr;width:100%;transform:scale(.88);">
+<img src="./images/solution_scroll_down.jpg"/>
+<img src="./images/solution_scroll_down_nav.jpg"/>
+</div>
 1. _Touch event: element remains in hovered state_

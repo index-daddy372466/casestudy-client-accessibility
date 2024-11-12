@@ -55,7 +55,7 @@ function removeInvertHeader(){
 
 
 // test toggle nav by class
-const toggleNav = (nav) => {
+  const toggleNav = (nav) => {
   nav.classList.toggle('hi-nav')
   const navclosed = document.querySelector('#nav').classList['value'].split` `.filter(x=>/(hi-nav|bye-nav)/i.test(x)).length < 2
   // conditions based on screen size and scroll position
@@ -81,8 +81,8 @@ const toggleNav = (nav) => {
       console.log('target acquired')
       spans.forEach((sp,idx)=>{
          sp.classList.toggle(spanclasses[idx])
-         toggleNav(document.getElementById('nav'))
       })
+      toggleNav(document.getElementById('nav'))
   }
   
   // resize window

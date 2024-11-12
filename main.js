@@ -38,6 +38,18 @@ function hoverLeaveListItem(e) {
     event.currentTarget.removeChild(hr);
   }
 }
+function invertHeader(){
+  const navclosed = document.querySelector('#nav').classList['value'].split` `.filter(x=>/(hi-nav|bye-nav)/i.test(x)).length < 2
+  mobwrap.classList.add('invert-env')
+  spans.forEach(sp=>navclosed ? sp.classList.add('invert-span') : sp.classList.remove('invert-span'))
+  document.getElementById('logo').classList.add('invert-logo')
+}
+function removeInvertHeader(){
+  mobwrap.classList.remove('invert-env')
+  spans.forEach(sp=>sp.classList.remove('invert-span'))
+  document.getElementById('logo').classList.remove('invert-logo')
+}
+
 
 // test toggle nav by class
 const toggleNav = (nav) => {
@@ -61,7 +73,6 @@ const toggleNav = (nav) => {
       console.log(classes)
       if(classes.length == 1) span.classList.remove(classes[0])
   }
-  
   // test click mob button
   mobbtn.onclick = e => {
       console.log('target acquired')
@@ -81,23 +92,12 @@ const toggleNav = (nav) => {
   }
 
 // window onscroll
-window.onscroll = e => {
-  console.log(window.scrollY)
-  if(window.scrollY > 0 && window.innerWidth <= 989){
-    invertHeader()
-  } else {
-    removeInvertHeader()
+  window.onscroll = e => {
+    console.log(window.scrollY)
+    if(window.scrollY > 0 && window.innerWidth <= 989){
+      invertHeader()
+    } else {
+      removeInvertHeader()
+    }
   }
-}
 
-function invertHeader(){
-  const navclosed = document.querySelector('#nav').classList['value'].split` `.filter(x=>/(hi-nav|bye-nav)/i.test(x)).length < 2
-  mobwrap.classList.add('invert-env')
-  spans.forEach(sp=>navclosed ? sp.classList.add('invert-span') : sp.classList.remove('invert-span'))
-  document.getElementById('logo').classList.add('invert-logo')
-}
-function removeInvertHeader(){
-  mobwrap.classList.remove('invert-env')
-  spans.forEach(sp=>sp.classList.remove('invert-span'))
-  document.getElementById('logo').classList.remove('invert-logo')
-}

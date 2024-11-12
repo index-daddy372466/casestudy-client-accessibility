@@ -245,6 +245,7 @@ body {
   background:#000;
 }
 @media screen and (max-width: 989px) {
+  
   #mob-button-container {
     display: block;
     /* border-bottom: 2px solid #333; */
@@ -373,6 +374,21 @@ body {
   }
   .invert-logo{
     background:#fff;
+  }
+  .nav-list-item > a,
+  #login,#signup{
+    transition: unset;
+  }
+  .nav-list-item > a:hover,
+  #login:hover,#signup:hover {
+    color: #000;
+    background: transparent;
+  }
+  .nav-list-item > a:active,
+  #login:active,#signup:active {
+    color: ghostwhite;
+    background: #333;
+    cursor: pointer;
   }
 }
 @media screen and (max-width: 800px) {

@@ -5,12 +5,15 @@ const mobbtn = document.getElementById('span-container')
 const mobwrap = document.getElementById('mob-wrapper')
 const spanclasses = ['top-span','mid-span','bottom-span']
 const spans = [...mobbtn.children]
+const mobileWidth = window.innerWidth <= 989;
+
 let interval;
 // iterate over nav list items and execute event listeners
 navlistitems.forEach((item, index) => {
- 
-    item.addEventListener("mouseenter", hoverOverListItem);
-    item.addEventListener("mouseleave", hoverLeaveListItem);
+ if(!mobileWidth){
+  item.addEventListener("mouseenter", hoverOverListItem);
+  item.addEventListener("mouseleave", hoverLeaveListItem);
+ }
   
 });
 

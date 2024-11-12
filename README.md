@@ -52,3 +52,4 @@ _____
 ### Solutions:
 
 1. _Overlapped Elements_
+1. _Touch event: element remains in hovered state_

@@ -60,11 +60,24 @@ _____
 <img src="./images/solution_starting_point_nav.jpg"/>
 </div>
 
+The ```nav#nav``` element's height & width is changed to increase visibility and prevent confusion. Since ```nav#nav```'s positions is fixed, The Navigation menu's position is determined by classes:<br> _hi-nav_ & _bye-nav_.<br>
 3 ```span``` elements are combined to create the _Hamburger_ menu.
 3 classes are made-up to represent how the span elements will end up after the container is clicked. (Hamburger menu).<br>
-In addition, the Navigation menu's position is determined by classes, _hi-nav_ & _bye-nav_.
 **_CSS_**
 ```
+#nav {
+  width: 100%;
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  position: fixed;
+  border-bottom: 2px solid black;
+  top: 0;
+  align-items: center;
+  height: 80px;
+  box-shadow: 0 0.25rem 20px 0.5px #333;
+}
 .bye-nav {
     right: -100%;
   }

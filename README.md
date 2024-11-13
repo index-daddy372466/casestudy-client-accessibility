@@ -51,6 +51,8 @@ _____
 
 ### Solutions:
 
+<hr id="solution1" style="opacity:0;">
+
 1. _Overlapped Elements_
 
 In response to overlapping elements, the current ```nav#nav``` element is transformed into a compact,div element & is viewed when user toggles the hamburger menu.
@@ -103,10 +105,12 @@ const spans = [...mobbtn.children]
 <img src="./images/solution_scroll_down_nav.jpg"/>
 </div>
 
+<hr id="solution2" style="opacity:0;">
+
 2. _Touch event: element remains in hovered state_
 
-Hovered elements utilized are fixed to make it seem like the hovered element is disabled.<br>
-The links' transition is **unset** since there is no need to transition to a different background/text color.
+Hovered elements' styles are fixed to make it seem like the hovered element is disabled. We are setting a new :hover pseudo-class when the media query changes.<br>
+Each links' transition is **unset** since there is no need to transition to a different background/text color.
 Finally, **_:active pseudo-class_** is implemented to alert the user that a link has been clicked on.
 
 **_CSS_**
@@ -141,4 +145,50 @@ if(!mobileWidth){
   item.addEventListener("mouseleave", hoverLeaveListItem);
  }
 ```
+<hr id="solution3" style="opacity:0;">
 
+3. _When scrolling down, access the navigation items is limited_ <br>
+Thanks to <a href="#solution1">solution 1</a> the ```nav#nav``` element's position is set to **fixed**.<br>
+Since the navigation is transformed and hidden upon entering the page, ```<div id="mob-wrapper"></div>``` is created to _act_ as a container holding the logo & hamburger menu when it is really an empty div element in a fixed position. <br>
+Now, when the user scrolls the page, their access to the navigation menu should remain visible.
+
+
+**_HTML_**
+```
+<div id="mob-wrapper"></div>
+          <!-- logo -->
+        <div id="logo-container">
+          <a href="/">
+            <img src="images/shh.webp" alt="" height="75" width="85" id="logo" />
+          </a>
+        </div>
+        <!-- hamburger menue -->
+          <div id="span-container" class="nohighlight">
+            <div class="mob-span no-pointer"></div>
+            <div class="mob-span no-pointer"></div>
+            <div class="mob-span no-pointer"></div>
+          </div>
+```
+**_CSS_**
+```
+#mob-wrapper{
+    border-bottom:2px solid black;
+    height:67px;
+    position:fixed;
+    top:0;
+    left:0;
+    transition: .25s;
+    width:100%;
+    display:Block;
+  }
+  ```
+  <div style="display:grid;grid-template-columns:1fr 1fr;width:100%;transform:scale(.88);">
+  <div>
+  <h4 style="text-align:center">Starting point</h4>
+  <img src="./images/solution_starting_point.jpg"/>
+  </div>
+  <div>
+  <h4 style="text-align:center">Scrolled</h4>
+  <img src="./images/solution_scroll_down.jpg"/>
+  </div>
+</div>

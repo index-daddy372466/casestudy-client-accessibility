@@ -145,6 +145,7 @@ body {
   position: absolute;
   top: 5px;
   left: 25px;
+  z-index:999;
 }
 .user-container {
   height: 100%;
@@ -166,6 +167,7 @@ body {
   font-size: 16px;
   background: transparent;
   z-index: 998;
+  color:#000;
 }
 #login:hover,
 #signup:hover {
@@ -370,7 +372,6 @@ body {
     width: 60px;
     top: 5px;
     left: 8px;
-    z-index: 999;
   }
   .invert-logo{
     background:#fff;
@@ -389,6 +390,17 @@ body {
     color: ghostwhite;
     background: #333;
     cursor: pointer;
+  }
+  .cta-btn {
+    transition: unset;
+  }
+  .cta-btn:hover {
+    color:#fff;
+    background:#333;
+  }
+  .cta-btn:active {
+    color:#333;
+    background:#fff;
   }
 }
 @media screen and (max-width: 800px) {

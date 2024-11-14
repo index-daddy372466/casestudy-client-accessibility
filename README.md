@@ -130,6 +130,17 @@ Finally, **_:active pseudo-class_** is implemented to alert the user that a link
     background: #333;
     cursor: pointer;
   }
+  .cta-btn {
+    transition: unset;
+  }
+  .cta-btn:hover {
+    color:#fff;
+    background:#333;
+  }
+  .cta-btn:active {
+    color:#333;
+    background:#fff;
+  }
 ```
 
  <img src="./images/underlinefeat.jpg">
@@ -192,3 +203,5 @@ Now, when the user scrolls the page, their access to the navigation menu should 
   <img src="./images/solution_scroll_down.jpg"/>
   </div>
 </div>
+
+4. _Button-element text color is not consistent with the rest of the page._ <br>

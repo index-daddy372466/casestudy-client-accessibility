@@ -193,7 +193,7 @@ Now, when the user scrolls the page, their access to the navigation menu should 
     display:Block;
   }
   ```
-  <div style="display:grid;grid-template-columns:1fr 1fr;width:100%;transform:scale(.88);">
+  <div style="display:flex;gap:1rem;;width:100%;transform:scale(.88);">
   <div>
   <h4 style="text-align:center">Starting point</h4>
   <img src="./images/solution_starting_point.jpg"/>
@@ -205,3 +205,29 @@ Now, when the user scrolls the page, their access to the navigation menu should 
 </div>
 
 4. _Button-element text color is not consistent with the rest of the page._ <br>
+
+Although popular desktop browsers default both ```#login``` & ```#signup``` buttons' text color to black, the mobile version defaults the color to somewhat of a light-blue.<br>
+To increase consistency and integrity of color schemes, a color property has been added to both buttons, ensuring that ```#000``` is the color that remains in both desktop & mobile interfaces.<br>
+
+  <div>
+  <img src="./images/sol41.PNG" height='350'/>
+  </div>
+
+**_CSS_**
+```
+#login,
+#signup {
+  border: none;
+  height: 100%;
+  width: 100%;
+  transition: 0.25s;
+  padding: 0.5rem;
+  font-size: 16px;
+  background: transparent;
+  z-index: 998;
+  color:#000;
+}
+```
+<div>
+  <img src="./images/sol42.PNG" height='350'/>
+</div>

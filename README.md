@@ -55,16 +55,16 @@ _____
 
 1. _Overlapped Elements_
 
-In response to overlapping elements, the current ```nav#nav``` element is transformed into a compact,div element & is viewed when user toggles the hamburger menu.
+- In response to overlapping elements, the current ```nav#nav``` element is transformed into a compact,div element & is viewed when user toggles the hamburger menu.
 
 <div style="display:grid;grid-template-columns:1fr 1fr;width:100%;transform:scale(.88);">
 <img src="./images/solution_starting_point.jpg"/>
 <img src="./images/solution_starting_point_nav.jpg"/>
 </div>
 
+The ```nav#nav``` element's height & width is changed to increase visibility and prevent confusion. Since ```nav#nav```'s positions is fixed, The Navigation menu's position is determined by classes:<br> _hi-nav_ & _bye-nav_.<br>
 3 ```span``` elements are combined to create the _Hamburger_ menu.
 3 classes are made-up to represent how the span elements will end up after the container is clicked. (Hamburger menu).<br>
-In addition, the Navigation menu's position is determined by classes, _hi-nav_ & _bye-nav_.
 **_CSS_**
 ```
 .bye-nav {

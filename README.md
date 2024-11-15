@@ -231,3 +231,6 @@ To increase consistency and integrity of color schemes, a color property has bee
 <div>
   <img src="./images/sol42.PNG" height='350'/>
 </div>
+
+## Conclusion
+

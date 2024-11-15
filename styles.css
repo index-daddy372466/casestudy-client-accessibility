@@ -369,6 +369,7 @@ body {
   #logo {
     position: fixed;
     height: 55px;
+    transition:.25s;
     width: 60px;
     top: 5px;
     left: 8px;

@@ -225,6 +225,7 @@ body {
   color: #fff;
   padding: 0.5rem;
   margin-left: 2rem;
+  z-index: 995;
   transition: 0.25s;
   box-shadow: 0 0.15rem 8px 0.9px #333;
 }
@@ -271,6 +272,8 @@ body {
     transition: .25s;
     width:100%;
     display:Block;
+    z-index:996;
+    
   }
   .spawn-hr{
     width:75%;

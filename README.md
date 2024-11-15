@@ -3,14 +3,14 @@
 
 ## Description
 
-- Stay up to date with the latest gossip that you cannot get anywhere else.
-Connect with the right people and you may get lost in a world of secrets.
+- The focus of this case study is on mock website, _Shaggy Secrets_.
+While the Desktop View seems readable & easy to navigate, its mobile counterpart can be improved.
 
 ### Issues:
 
 1. #### _Overlapped Elements_ <br>
 
-<img src="./images/problemissue.jpg" style="transform:scale(.88);"/>
+<img src="./images/problemissue.jpg" height="350"/>
 
 **Description**: <br> Notice how the navigation is reduced in size compared to the desktop view above. The first navigation link, "What we Offer" seems to overlap the logo. Just like our navigation list-items, the logo is covered by an article tag that ulitmately refreshes the page.
 
@@ -38,14 +38,14 @@ If the client intends to click on the logo, then the logo's z-index would need t
 **Description**: <br>Whether the target link is directed to a __Blank_ page or __self_, the item touched remains in it's hovered state. The underline-feature seems to be cutting through the navigation-item text.
 When scrolling down, access to navigation pane is limited.
 
-<img src="./images/problemissue3.jpg" style="transform:scale(.88);"/><img src="./images/problemissue2.jpg" style="transform:scale(.88);"/>
+<img src="./images/problemissue3.jpg" height="350"/><img src="./images/problemissue2.jpg" height="350"/>
 
 
 4. #### _Button-element text color is not consistent with the rest of the page._ <br>
 
 **Description**: <br> Buttons _Login_ & _Signup_ default to light blue. Element consistency and uniformity is weakened. 
 
-<img src="./images/problemissue2.jpg" style="transform:scale(.88);"/>
+<img src="./images/problemissue2.jpg" height="350"/>
 
 _____
 
@@ -57,9 +57,9 @@ _____
 
 - In response to overlapping elements, the current ```nav#nav``` element is transformed into a compact,div element & is viewed when user toggles the hamburger menu.
 
-<div style="display:grid;grid-template-columns:1fr 1fr;width:100%;transform:scale(.88);">
-<img src="./images/solution_starting_point.jpg"/>
-<img src="./images/solution_starting_point_nav.jpg"/>
+<div style="display:flex;width:100%;">
+<img src="./images/solution_starting_point.jpg" height="350"/>
+<img src="./images/solution_starting_point_nav.jpg" height="350"/>
 </div>
 
 The ```nav#nav``` element's height & width is changed to increase visibility and prevent confusion. Since ```nav#nav```'s positions is fixed, The Navigation menu's position is determined by classes:<br> _hi-nav_ & _bye-nav_.<br>
@@ -100,9 +100,9 @@ const spans = [...mobbtn.children]
       toggleNav(document.getElementById('nav'))
   }
 ```
-<div style="display:grid;grid-template-columns:1fr 1fr;width:100%;transform:scale(.88);">
-<img src="./images/solution_scroll_down.jpg"/>
-<img src="./images/solution_scroll_down_nav.jpg"/>
+<div style="display:flex;width:100%;">
+<img src="./images/solution_scroll_down.jpg" height="350"/>
+<img src="./images/solution_scroll_down_nav.jpg" height="350"/>
 </div>
 
 <hr id="solution2" style="opacity:0;">
@@ -193,7 +193,7 @@ Now, when the user scrolls the page, their access to the navigation menu should 
     display:Block;
   }
   ```
-  <div style="display:flex;gap:1rem;;width:100%;transform:scale(.88);">
+  <div style="display:flex;;width:100%;transform:scale(.88);">
   <div>
   <h4 style="text-align:center">Starting point</h4>
   <img src="./images/solution_starting_point.jpg"/>
@@ -229,8 +229,25 @@ To increase consistency and integrity of color schemes, a color property has bee
 }
 ```
 <div>
-  <img src="./images/sol42.PNG" height='350'/>
+  <img src="./images/sol42.PNG" height='275'/>
 </div>
 
 ## Conclusion
+Again, we are focusing on the Mobile view of _Shaggy Secrets_.
+Displayed below is the before & after displays of the site. To conclude, read some impacts below from this case study. 
 
+1. Migrating the navigation menu to a toggled-feature reduces navigation errors when clicking on links & increases user-control.
+2. website links & buttons have been altered to accommodate touch/tap.<br>
+3. The _updated_ navigation menu stays with the user wherever they scroll, increasing user-accessibility<br>
+4. buttons are manipulated to prevent default styles.
+
+
+
+<div>
+<h4>Before</h4>
+<img src="./images/problemissue2.jpg" height="350"/>
+</div>
+
+<h4>After</h4>
+<img src="./images/solution_starting_point.jpg" height="350"/>
+<img src="./images/solution_starting_point_nav.jpg" height="350"/>
